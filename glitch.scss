@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(55, 55, 55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .glitch-container {
+        width: 600px;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h1 {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        text-transform: capitalize;
+        text-align: center;
+        color: red;
+        font-family: sans-serif;
+        color: white;
+        font-weight: bolder;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        background-position: bottom;
+    }
+
+    .glitch-container:hover img {
+        animation: glitch 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate-reverse;
+        transition: .5s;
+    }
+
+    .glitchs {
+        width: 600px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        display: none;
+        animation: glitch 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite alternate-reverse;
+
+        img {
+            position: relative;
+        }
+    }
+
+    #glitch12 {
+        top: 0;
+        animation-delay: .5s;
+        height: 50px;
+
+        img {
+            filter: contrast(20);
+        }
+    }
+
+    #glitch11 {
+        top: 50px;
+        animation-delay: .1s;
+        height: 50px;
+
+        img {
+            top: -50px;
+            filter: saturate(7);
+        }
+    }
+
+    #glitch10 {
+        top: 100px;
+        animation-delay: .6s;
+        height: 20px;
+
+        img {
+            top: -100px;
+            filter: saturate(2);
+        }
+    }
+
+    #glitch9 {
+        top: 120px;
+        animation-delay: .3s;
+        height: 30px;
+
+        img {
+            top: -120px;
+            filter: sepia(54);
+        }
+    }
+
+    #glitch8 {
+        top: 170px;
+        animation-delay: .1s;
+        height: 50px;
+
+        img {
+            top: -170px;
+            filter: invert(4);
+        }
+    }
+
+    #glitch7 {
+        top: 230px;
+        animation-delay: .7s;
+        height: 10px;
+
+        img {
+            top: -230px;
+            filter: hue-rotate(80deg);
+        }
+    }
+
+    #glitch6 {
+        top: 260px;
+        animation-delay: .5s;
+        height: 30px;
+
+        img {
+            top: -260px;
+        }
+    }
+
+    #glitch5 {
+        top: 300px;
+        animation-delay: .3s;
+        height: 30px;
+
+        img {
+            top: -300px;
+            filter: hue-rotate(100deg);
+        }
+    }
+
+    #glitch4 {
+        top: 350px;
+        animation-delay: .2s;
+        height: 50px;
+
+        img {
+            top: -350px;
+        }
+    }
+
+    #glitch3 {
+        top: 20px;
+        animation-delay: .1s;
+        height: 30px;
+        z-index: 8;
+
+        img {
+            top: -20px;
+            filter: grayscale(34);
+        }
+    }
+
+    #glitch2 {
+        top: 70px;
+        animation-delay: .4s;
+        height: 40px;
+        z-index: 8;
+
+        img {
+            top: -70px;
+            filter: invert(0.8);
+        }
+    }
+
+    #glitch1 {
+        top: 200px;
+        animation-delay: .5s;
+        height: 30px;
+        z-index: 8;
+
+        img {
+            top: -200px;
+            filter: sepia(34);
+        }
+    }
+
+    @keyframes glitch {
+        0% {
+            left: 10px;
+        }
+
+        20% {
+            left: -10px;
+            filter: grayscale(34);
+        }
+
+        40% {
+            left: 15px;
+            filter: sepia(34);
+        }
+
+        50% {
+            left: 0;
+            filter: invert(4);
+        }
+
+        60% {
+            left: 10px;
+            filter: contrast(20);
+        }
+
+        80% {
+            left: -10px;
+            filter: invert(0.8);
+        }
+
+        100% {
+            left: 5px;
+            filter: hue-rotate(100deg);
+        }
+    }
+
+    .glitch-container:hover .glitchs {
+        display: block;
+    }
+}
